@@ -25,6 +25,10 @@ const Blog = ({ blog, addLike, removeBlog, user }) => {
     }
   };
 
+  if (!blog.username) {
+    return;
+  }
+
   return (
     <div style={blogstyle}>
       <div style={hideWhenVisible} className="blog">
@@ -47,7 +51,7 @@ const Blog = ({ blog, addLike, removeBlog, user }) => {
           like
         </button>
         <br />
-        {blog?.user?.username}
+        {blog.user.username}
         <br />
         <button
           id="remove-button"

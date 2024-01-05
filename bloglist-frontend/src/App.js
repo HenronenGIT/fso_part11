@@ -72,7 +72,7 @@ const App = () => {
     blogFormRef.current.toggleVisibility();
     blogService.create(blogObject).then((returnedBlog) => {
       setSuccessMessage(
-        `a new blog ${returnedBlog.title} by ${returnedBlog.author} added`
+        `a new blog ${returnedBlog.title} by ${returnedBlog.author} added`,
       );
       setTimeout(() => {
         setSuccessMessage(null);
@@ -89,7 +89,7 @@ const App = () => {
     };
     blogService.update(oldBlog.id, changedBlog).then(() => {
       setBlogs(
-        blogs.map((blog) => (blog.id !== oldBlog.id ? blog : changedBlog))
+        blogs.map((blog) => (blog.id !== oldBlog.id ? blog : changedBlog)),
       );
     });
     blogs.sort(compareLikes);
@@ -98,7 +98,7 @@ const App = () => {
   const removeBlog = (removableBlog) => {
     if (
       window.confirm(
-        `Remove blog ${removableBlog.title} by ${removableBlog.author}`
+        `Remove blog ${removableBlog.title} by ${removableBlog.author}`,
       )
     ) {
       blogService.remove(removableBlog.id).then(() => {

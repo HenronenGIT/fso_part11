@@ -18,3 +18,18 @@ jobs:
       - name: Install CLIENT deps
         run: npm install
         working-directory: ./bloglist-frontend
+
+      - name: Lint SERVER
+        run: npm run lint
+
+      - name: Lint CLIENT
+        run: npm run lint
+        working-directory: ./bloglist-frontend
+      # - name: Test SERVER
+      #   run: npm test
+
+      # - name: Test CLIENT
+
+      - name: Build CLIENT
+        run: npm run build
+        working-directory: ./bloglist-frontend

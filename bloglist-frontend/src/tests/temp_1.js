@@ -28,7 +28,7 @@ test("renders title and author", () => {
       addLike={mockHandler}
       removeBlog={mockHandler}
       user={user}
-    />
+    />,
   );
 
   const div = container.querySelector(".blog");
@@ -61,7 +61,7 @@ test("does not render url and likes", async () => {
       addLike={mockHandler}
       removeBlog={mockHandler}
       user={user}
-    />
+    />,
   );
 
   const url = screen.queryByText(blog.url);
@@ -98,7 +98,7 @@ test("clicking the view button shows url and likes", async () => {
       addLike={mockHandler}
       removeBlog={mockHandler}
       user={user}
-    />
+    />,
   );
 
   const mock_user = userEvent.setup();
@@ -132,7 +132,7 @@ test("clicking the like button is working", async () => {
       addLike={mockHandler}
       removeBlog={mockHandler}
       user={user}
-    />
+    />,
   );
 
   const mock_user = userEvent.setup();
