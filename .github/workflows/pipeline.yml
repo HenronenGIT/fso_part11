@@ -6,10 +6,15 @@ on:
       - main
 
 jobs:
-  deploymet:
+  deployment:
     runs-on: ubuntu-20.04
     steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
-        - name: Install dependencies
-          run: npm install
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
+      - name: Install SERVER deps
+        run: npm install
+
+      - name: Install CLIENT deps
+        run: npm install
+        working-directory: ./bloglist-frontend
