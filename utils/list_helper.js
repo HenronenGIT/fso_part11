@@ -1,12 +1,12 @@
-const e = require("cors")
+// const e = require("cors")
 
-const dummy = blogs => {
-	return (1)
-}
+// const dummy = blogs => {
+// 	return (1)
+// }
 
 const totalLikes = blogs => {
 	let totalLikes = 0
-	
+
 	blogs.forEach(blog => {
 			totalLikes += blog.likes
 		})
@@ -20,7 +20,7 @@ const favoriteBlog = blogs => {
 }
 
 module.exports = {
-	dummy,
+	// dummy,
 	totalLikes,
 	favoriteBlog
 }
