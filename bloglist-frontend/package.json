@@ -19,7 +19,6 @@
 		"cypress:open": "cypress open",
 		"prettier": "prettier --write"
 	},
-
 	"browserslist": {
 		"production": [
 			">0.2%",
